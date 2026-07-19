@@ -33,6 +33,7 @@
 .session-state{display:flex!important;align-items:center;gap:9px}
 .session-state>b{width:27px;height:27px;border-radius:50%;background:#e6eee9;color:#2f684d;display:grid;place-items:center;font-size:9px}
 .session-state>strong{font-size:9px;color:#293831}
+.session-date-type{display:flex!important;flex-direction:column;gap:3px}.session-date-type>b{font-size:9px;color:#56635c;overflow:hidden;text-overflow:ellipsis}.session-date-type>small{font-size:9px;color:#8a948f;overflow:hidden;text-overflow:ellipsis}
 .session-status{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:6px;background:#8a9590}
 .session-status.in-session{background:#3b9a66}.session-status.special-session{background:#8b64a2}.session-status.recess{background:#d29a45}.session-status.adjourned{background:#6885a0}.session-status.out-of-session{background:#9da6a2}
 .state-session-indicator{display:inline-flex;align-items:center;gap:4px;width:max-content;white-space:nowrap;border-radius:10px;background:#edf1ee;color:#68736e;padding:3px 6px;font-size:9px;font-weight:700;line-height:1}
