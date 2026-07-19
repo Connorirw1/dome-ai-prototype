@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dome — legislative intelligence built for multi-client public affairs teams." />
+  <title>Dome — Legislative Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./reports-settings.css" />
+  <link rel="stylesheet" href="./object-platform.css" />
+  <link rel="stylesheet" href="./session-schedule.css" />
+  <link rel="stylesheet" href="./themes.css" />
+  <link rel="stylesheet" href="./ai-foundation.css" />
+  <link rel="stylesheet" href="./issue-workspace.css" />
+  <link rel="stylesheet" href="./issue-updates.css" />
+  <link rel="stylesheet" href="./bill-workspace.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-row">
+        <a class="brand" href="#dashboard" aria-label="Dome home"><span class="brand-mark">D</span><span>Dome</span></a>
+        <button class="side-collapse" id="closeMenu" aria-label="Close navigation">×</button>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#dashboard" data-route="dashboard"><span class="nav-icon">⌂</span><span>Dashboard</span><i>7</i></a>
+        <a class="nav-link" href="#issues" data-route="issues"><span class="nav-icon">◫</span><span>Issues</span></a>
+        <a class="nav-link" href="#clients" data-route="clients"><span class="nav-icon">◎</span><span>Clients</span></a>
+        <a class="nav-link" href="#keywords" data-route="keywords"><span class="nav-icon">#</span><span>Keywords</span></a>
+        <a class="nav-link" href="#search" data-route="search"><span class="nav-icon">⌕</span><span>Search</span></a>
+        <a class="nav-link" href="#reports" data-route="reports"><span class="nav-icon">▤</span><span>Reports</span></a>
+        <a class="nav-link settings-link" href="#settings" data-route="settings"><span class="nav-icon">⚙</span><span>Settings</span></a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="coverage-card">
+          <div><span class="pulse"></span><b>50-state coverage</b></div>
+          <p>All state legislatures are syncing normally.</p>
+          <span>Updated 12 min ago</span>
+        </div>
+        <button class="org-switcher" aria-label="Open organization menu">
+          <span class="org-avatar">CL</span>
+          <span><b>Capitol Lane</b><small>12 team members</small></span>
+          <i>⌄</i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="openMenu" aria-label="Open navigation">☰</button>
+          <span class="crumb">Workspace</span><span class="crumb-sep">/</span><strong id="crumbTitle">Dashboard</strong>
+        </div>
+        <div class="topbar-actions">
+          <button class="global-search" id="globalSearch"><span>⌕</span><span>Search legislation</span><kbd>⌘ K</kbd></button>
+          <button class="top-icon has-dot" aria-label="Notifications">♢</button>
+          <button class="help" aria-label="Help">?</button>
+          <button class="user-menu" aria-label="Open user menu">CM</button>
+        </div>
+      </header>
+
+      <div class="page" id="app" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <dialog class="modal" id="entityModal">
+    <form id="entityForm">
+      <div class="modal-head">
+        <div><span class="overline" id="modalEyebrow">NEW ISSUE</span><h2 id="modalTitle">Create an issue</h2></div>
+        <button type="button" class="icon-close" data-close-modal aria-label="Close">×</button>
+      </div>
+      <div class="modal-body" id="modalFields"></div>
+      <div class="modal-actions"><button type="button" class="button secondary" data-close-modal>Cancel</button><button type="submit" class="button primary" id="modalSubmit">Create issue</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="session-modal" id="sessionModal">
+    <div id="sessionModalContent"></div>
+  </dialog>
+
+  <div class="object-backdrop" id="objectBackdrop" hidden></div>
+  <aside class="object-drawer" id="objectDrawer" aria-label="Object details" aria-hidden="true">
+    <div id="objectDrawerContent"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

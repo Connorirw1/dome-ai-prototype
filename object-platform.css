@@ -1,0 +1,52 @@
+.object-link,.inline-object-title,.bill-object-link,.owner-link{border:0;background:none;color:inherit;padding:0;font:inherit;text-align:left}
+.object-link:hover,.inline-object-title:hover,.owner-link:hover{text-decoration:underline;text-decoration-color:#8eb5a1;text-underline-offset:2px}
+.inline-object-title{font-weight:inherit}
+.alert-meta .object-link,.alert-meta .bill-object-link{font-size:7px;border-radius:3px;background:#f0f3f0;color:#63706a;padding:3px 6px;font-weight:600}
+.alert-meta .bill-object-link{background:#e8f1eb;color:#286446}
+.mini-tag{border:0;display:inline-block}
+.client-logo,.state-seal{border:0}
+.issue-tags .object-link,.bill-tags .object-link{border:1px solid #dce4df;border-radius:4px;padding:3px 5px;font-size:7px;white-space:nowrap}
+.bill-tags .object-link{padding:3px 6px}
+.owner-link{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.object-avatar{width:22px;height:22px;border:2px solid white;border-radius:50%;background:#d6e4dc;color:#365a49;display:grid;place-items:center;font-size:6px;font-weight:800;margin-left:calc(var(--i) * -5px);padding:0}
+.object-avatar:first-child{margin-left:0}
+.report-preview{border:0;width:100%;text-align:left;font-family:inherit}
+.object-backdrop{position:fixed;inset:0;background:rgba(15,31,25,.2);backdrop-filter:blur(1px);z-index:39}
+.object-drawer{position:fixed;top:0;right:0;width:min(560px,100vw);height:100vh;background:#fff;border-left:1px solid var(--line);box-shadow:-25px 0 70px rgba(16,35,28,.16);z-index:40;transform:translateX(105%);transition:transform .22s ease;overflow:hidden}
+.object-drawer.open{transform:none}
+.object-drawer>div{height:100%;display:flex;flex-direction:column}
+.drawer-top{height:47px;flex:0 0 47px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 17px}
+.drawer-top>span{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:#8b9590;font-weight:700}
+.drawer-top>div{display:flex;align-items:center;gap:10px}
+.drawer-top button{border:0;background:none;color:#61706a;font-size:8px}
+.drawer-top .drawer-close{font-size:21px;color:#7d8782}
+.object-heading{display:grid;grid-template-columns:auto 1fr;gap:13px;padding:20px 21px 15px}
+.object-type-icon{width:40px;height:40px;border-radius:9px;display:grid;place-items:center;background:#e4efe8;color:#28664a;font-size:18px}
+.object-type-icon.bill{background:#e6edf3;color:#496e8b}.object-type-icon.legislator{background:#eee8f2;color:#6e5786}.object-type-icon.keyword{background:#efe9f3;color:#735c8d}.object-type-icon.report{background:#f2eadc;color:#8f662b}.object-type-icon.user{background:#e9edeb;color:#53645c}
+.object-type-icon.committee,.object-type-icon.organization,.object-type-icon.chamber{background:#e3ebf2;color:#486d89}.object-type-icon.hearing,.object-type-icon.session{background:#f3eadb;color:#946b30}.object-type-icon.amendment,.object-type-icon.document,.object-type-icon.bill-version{background:#ebe7f2;color:#6d5888}.object-type-icon.vote,.object-type-icon.position{background:#e5f0e9;color:#2d704e}.object-type-icon.engagement,.object-type-icon.contact{background:#e7edef;color:#4d6973}.object-type-icon.saved-search,.object-type-icon.report-template{background:#eee9f2;color:#715b88}
+.object-heading p{font-size:7px;letter-spacing:.11em;color:#87918c;font-weight:700;margin:1px 0 4px}
+.object-heading h1{font:800 18px/1.25 var(--display);letter-spacing:-.035em;margin:0 0 5px}
+.object-heading>div>span{font-size:8px;color:#7b8681}
+.object-subtitle{display:flex;align-items:center;gap:7px}.object-subtitle>span:first-child{font-size:8px;color:#7b8681}
+.object-controls{display:flex;gap:6px;padding:0 21px 16px;border-bottom:1px solid var(--line)}
+.object-controls label{display:flex;align-items:center;gap:7px;border:1px solid #dbe1dd;border-radius:5px;padding:0 8px;color:#7a8580;font-size:7px}
+.object-controls select{border:0;background:#fff;padding:7px 0;font-size:8px;color:#34423c;outline:0}
+.object-controls>button{border:1px solid #dbe1dd;background:#fff;border-radius:5px;padding:7px 9px;color:#52605a;font-size:8px}
+.drawer-scroll{overflow:auto;padding:15px 20px 40px;background:#fbfcfa}
+.signal-card{display:grid;grid-template-columns:auto 1fr;gap:10px;background:#eef5f0;border:1px solid #d9e8de;border-radius:7px;padding:13px 14px;margin-bottom:12px}
+.signal-card>span{color:#2a7650}.signal-card small{font-size:7px;text-transform:uppercase;letter-spacing:.09em;color:#3d7658;font-weight:800}.signal-card p{font-size:9px;line-height:1.55;color:#51615a;margin:5px 0 0}
+.drawer-section{background:#fff;border:1px solid var(--line);border-radius:7px;margin-bottom:11px;overflow:hidden}
+.drawer-section-head{height:43px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid var(--line)}
+.drawer-section-head h2{font:700 12px var(--display);margin:0}.drawer-section-head>span{font-size:7px;color:#8d9692}.drawer-section-head>button{border:0;background:none;color:var(--green);font-size:8px;font-weight:700}
+.relationship-grid{display:grid;grid-template-columns:1fr 1fr;padding:8px}
+.relationship-grid>button{border:0;background:#fff;border-radius:5px;padding:8px;display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;text-align:left;min-width:0}
+.relationship-grid>button:hover{background:#f4f7f4}
+.relation-icon{width:28px;height:28px;border-radius:6px;background:#e7f1eb;color:#2d6b4c;display:grid;place-items:center}.relation-icon.bill{background:#e6edf3;color:#4b6e89}.relation-icon.report{background:#f3eadc;color:#8e672d}.relation-icon.user,.relation-icon.legislator{background:#eceeed;color:#596760}.relation-icon.keyword{background:#eee9f2;color:#6e5a83}
+.relation-icon.committee,.relation-icon.organization,.relation-icon.chamber{background:#e4ebf1;color:#496c86}.relation-icon.hearing,.relation-icon.session{background:#f3ebdd;color:#90682f}.relation-icon.amendment,.relation-icon.document,.relation-icon.bill-version,.relation-icon.report-template,.relation-icon.saved-search{background:#eee9f2;color:#6e5984}.relation-icon.vote,.relation-icon.position{background:#e4efe8;color:#2d6d4c}.relation-icon.engagement,.relation-icon.contact{background:#e7edef;color:#4e6b74}
+.relationship-grid b,.relationship-grid small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.relationship-grid b{font-size:8px;color:#35443d}.relationship-grid small{font-size:7px;color:#8d9692;margin-top:3px}.relationship-grid i{font-style:normal;color:#9ba39f;font-size:9px}
+.empty-state{grid-column:1/-1;padding:12px;margin:0;font-size:8px;color:#909995;text-align:center}
+.quick-action-form{padding:10px 13px;border-bottom:1px solid var(--line);background:#f8faf8}.quick-action-form>input{width:100%;border:1px solid #d9dfdb;border-radius:5px;padding:8px;font-size:9px;margin-bottom:6px}.quick-action-form>div{display:grid;grid-template-columns:1fr 90px auto;gap:6px}.quick-action-form select,.quick-action-form div>input{min-width:0;border:1px solid #d9dfdb;border-radius:5px;padding:7px;font-size:8px;background:#fff}
+.action-item{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:9px;padding:10px 13px;border-bottom:1px solid #edf0ed}.action-item:last-child{border-bottom:0}.action-item input{accent-color:var(--green)}.action-item b,.action-item small{display:block}.action-item b{font-size:9px}.action-item small{font-size:7px;color:#8a938f;margin-top:3px}.action-item.done b{text-decoration:line-through;color:#8f9894}.priority-dot{font-style:normal;font-size:6px;text-transform:uppercase;border-radius:9px;padding:3px 6px;background:#edf0ee;color:#6d7772}.priority-dot.high,.priority-dot.critical{background:#f4e3df;color:#a34e43}.priority-dot.medium{background:#f6ecdc;color:#976b2d}.priority-dot.low{background:#e9f0ec;color:#557163}
+.comment-list{padding:3px 13px}.comment{display:grid;grid-template-columns:auto 1fr;gap:9px;padding:11px 0;border-bottom:1px solid #edf0ed}.comment>button,.comment-form>span{width:27px;height:27px;border:0;border-radius:50%;background:#dce8e1;color:#2d674b;display:grid;place-items:center;font-size:7px;font-weight:800}.comment p{margin:0 0 5px;font-size:8px}.comment time{color:#98a09c;font-size:7px;margin-left:5px}.comment>div>div{font-size:9px;line-height:1.5;color:#58655f}.mention{border:0;background:#e7f1eb;color:#246b48;border-radius:3px;padding:1px 3px;font:inherit}.activity-event{display:flex;gap:8px;padding:10px 0;color:#7f8984}.activity-event span{width:27px;text-align:center}.activity-event p{font-size:8px;margin:0}.activity-event time{color:#9aa29e}
+.comment-form{display:grid;grid-template-columns:auto 1fr;gap:9px;padding:11px 13px;border-top:1px solid var(--line);background:#fafbfa}.comment-form>div{border:1px solid #d9dfdb;border-radius:5px;background:#fff;overflow:hidden}.comment-form textarea{border:0;outline:0;width:100%;min-height:52px;resize:none;padding:8px;font-size:8px}.comment-form footer{display:flex;align-items:center;justify-content:space-between;padding:5px 7px;border-top:1px solid #edf0ed}.comment-form small{font-size:7px;color:#8b9590}.comment-form button{border:0;background:var(--green);color:#fff;border-radius:4px;padding:5px 8px;font-size:7px;font-weight:700}
+@media(max-width:620px){.object-drawer{width:100vw}.object-backdrop{display:none}.drawer-scroll{padding:12px}.object-heading{padding:16px}.object-controls{padding:0 16px 14px;overflow:auto}.object-controls>button,.object-controls label{white-space:nowrap}.relationship-grid{grid-template-columns:1fr}}
