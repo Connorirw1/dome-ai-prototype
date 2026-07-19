@@ -1,0 +1,42 @@
+.search-bill-card{grid-template-columns:auto minmax(0,1fr) 98px;padding:15px 16px;gap:13px;transition:border-color .15s,box-shadow .15s}
+.search-bill-card:hover{border-color:#cbd8d0;box-shadow:0 5px 18px rgba(28,61,44,.05)}
+.search-bill-card.is-tracked{border-left:3px solid #2f7753}
+.search-bill-card .bill-main>p{max-width:690px}
+.bill-match-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:9px 0}
+.bill-match-row>span{font-size:9px;color:#8a948f;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.bill-match-row>b{font-size:9px;font-weight:600;color:#5f6d66;background:#f1f4f2;border-radius:10px;padding:3px 7px}
+.confirmed-associations{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin:9px 0}
+.confirmed-associations>span{font-size:9px;color:#367052;letter-spacing:.08em;font-weight:800}
+.confirmed-associations .object-link{font-size:9px;border:1px solid #d8e2dc;background:#fff;border-radius:4px;padding:3px 6px;color:#526159}
+.confirmed-associations .theme-chip{background:#f1edf5;border-color:#dfd6e8;color:#69537f}
+.search-bill-card .bill-meta{margin-top:9px;align-items:center;justify-content:space-between}
+.review-state{display:inline-flex;align-items:center;gap:5px;color:#6d7872;font-size:9px}
+.review-state>i{width:6px;height:6px;border-radius:50%;background:#98a29d}
+.review-state.assigned-for-review>i{background:#b47a2d}.review-state.in-review>i{background:#527ca0}.review-state.tracking>i{background:#2e7b54}.review-state.dismissed>i{background:#9b6d68}
+.review-state .object-link{color:inherit;font-weight:700}
+.bill-card-actions{display:flex;flex-direction:column;gap:6px;align-items:stretch}
+.bill-card-actions>button{border:1px solid #d9e0dc;background:#fff;color:#526159;border-radius:5px;padding:7px 8px;font-size:9px;font-weight:700;white-space:nowrap}
+.bill-card-actions>button:hover{border-color:#aebfb5;background:#f7faf8}
+.bill-card-actions .track-button{background:#edf5f0;border-color:#cfe0d5;color:#286b4a}
+.bill-card-actions .track-button.tracked{background:#2b704e;border-color:#2b704e;color:#fff}
+.bill-triage-section .drawer-section-head{height:auto;min-height:43px;padding-top:8px;padding-bottom:8px;gap:8px}
+.bill-review-detail{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:4px 13px 12px}
+.bill-review-detail>div:not(.review-actions){padding:9px 0}
+.bill-review-detail small,.confirmed-workflow>small,.suggestion-box>small{display:block;font-size:9px;color:#8a948f;letter-spacing:.08em;font-weight:800;margin-bottom:5px}
+.bill-review-detail b{font-size:9px;color:#415048}
+.review-actions{grid-column:1/-1;display:flex;gap:6px;border-top:1px solid #edf0ee;padding-top:10px}
+.review-actions button,.suggestion-box>button{border:1px solid #d3dfd7;background:#f0f6f2;color:#286b4a;border-radius:5px;padding:7px 9px;font-size:9px;font-weight:800}
+.confirmed-workflow,.suggestion-box{padding:13px}
+.confirmed-workflow>div,.suggestion-box>div{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:13px}
+.confirmed-workflow>div .object-link,.suggestion-box>div span{border:1px solid #dce3df;border-radius:4px;padding:4px 6px;font-size:9px;color:#526159;background:#fff}
+.confirmed-workflow dl{margin:0;border-top:1px solid #edf0ee}
+.confirmed-workflow dl>div{display:grid;grid-template-columns:80px 1fr;gap:8px;padding:9px 0;border-bottom:1px solid #edf0ee}
+.confirmed-workflow dt{font-size:9px;color:#8a948f}.confirmed-workflow dd{font-size:9px;color:#46544d;margin:0;line-height:1.45}
+.suggestion-box{background:#fbf9fc}
+.suggestion-box>p{font-size:9px;line-height:1.5;color:#68746e;margin:0 0 12px}
+.suggestion-box>button{width:100%;background:#f2edf6;border-color:#ded3e8;color:#69517f}
+.workflow-modal{width:min(620px,calc(100% - 28px))}
+.workflow-intro{background:#f3f7f4;border:1px solid #dfe8e2;border-radius:6px;padding:11px 12px;margin-bottom:15px}
+.workflow-intro b{font-size:10px}.workflow-intro p{font-size:9px;color:#68756e;line-height:1.5;margin:4px 0 0}
+@media(max-width:760px){.search-bill-card{grid-template-columns:auto 1fr}.bill-card-actions{grid-column:2;flex-direction:row;flex-wrap:wrap}.bill-card-actions>button{flex:1}.search-bill-card .bill-meta{align-items:flex-start;flex-direction:column}}
+@media(max-width:500px){.bill-match-row,.confirmed-associations{display:none}.bill-card-actions{grid-column:1/-1}.search-bill-card .bill-meta{display:flex}.bill-review-detail{grid-template-columns:1fr}.bill-review-detail>div{grid-column:1}.review-actions{flex-wrap:wrap}}
