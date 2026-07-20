@@ -1,8 +1,8 @@
 .theme-line{margin-top:13px;padding-top:11px;border-top:1px solid #edf0ed}
-.theme-line>span{font-size:9px;color:#949d98;font-weight:700;letter-spacing:.09em}
+.theme-line>span{font-size:11px;color:#949d98;font-weight:700;letter-spacing:.09em}
 .theme-line>div{display:flex;align-items:center;gap:5px;margin-top:7px;min-width:0}
-.theme-line em{font-style:normal;font-size:9px;color:#7f8984;white-space:nowrap}
-.theme-chip{border:1px solid #ddd5e7;background:#f1edf5;color:#66517c;border-radius:4px;padding:4px 6px;font-size:9px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;text-align:left}
+.theme-line em{font-style:normal;font-size:11px;color:#7f8984;white-space:nowrap}
+.theme-chip{border:1px solid #ddd5e7;background:#f1edf5;color:#66517c;border-radius:4px;padding:4px 6px;font-size:11px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;text-align:left}
 .theme-chip:hover{border-color:#bcaacf;background:#ebe4f1}
 .keyword-themes{display:flex;gap:4px;flex-wrap:wrap;max-width:240px}
 .keyword-table{min-width:1080px}
