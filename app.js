@@ -662,6 +662,7 @@ document.addEventListener("click",e=>{
   if(e.target.closest("[data-toggle-columns]")){state.issueWorkspace.columnsOpen=!state.issueWorkspace.columnsOpen;render();return;}
   if(e.target.closest("[data-add-view]")){const name=prompt("Name this view");if(name?.trim()){const base=activeIssueView(),id=`custom-${Date.now()}`;state.issueWorkspace.customViews.push({id,name:name.trim(),base});state.issueWorkspace.columns[id]=[...(state.issueWorkspace.columns[state.issueWorkspace.view]||state.issueWorkspace.columns[base])];state.issueWorkspace.view=id;render();showToast("View created");}return;}
   const startProfile=e.target.closest("[data-start-profile]");if(startProfile){openModal("client-profile",null,{client:startProfile.dataset.startProfile});return;}
+  const issueCardTitle=e.target.closest('.issue-card h2 [data-object-type="issue"]');if(issueCardTitle){Object.assign(state.issueWorkspace,{theme:"All themes",client:"All clients",view:"high-level",state:"All states",columnsOpen:false,updatesOpen:false,updateFilter:"All updates"});location.hash=`issue?id=${issueCardTitle.dataset.objectId}`;return;}
   const objectLink=e.target.closest("[data-object-type]");if(objectLink){navigateObject(objectLink.dataset.objectType,objectLink.dataset.objectId);return;}
   if(e.target.closest("[data-close-object]")||e.target.id==="objectBackdrop"){closeObjectDrawer();return;}
   if(e.target.closest("[data-copy-object]")){navigator.clipboard?.writeText(location.href);showToast("Object link copied");}
