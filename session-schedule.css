@@ -1,4 +1,4 @@
-@media(min-width:1121px){.stats-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:1121px){.stats-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .session-stat{position:relative;text-align:left;color:inherit;font-family:inherit;cursor:pointer}
 .session-stat:hover{border-color:#a9c7b5;background:#fbfdfb;box-shadow:0 8px 24px rgba(24,42,35,.06)}
 .session-stat .stat-arrow{position:absolute;right:14px;top:14px;color:#4d8066;font-size:11px}
