@@ -372,7 +372,6 @@ function renderDashboard(){
   return `${sectionHeader(pageMeta.dashboard[1],pageMeta.dashboard[2])}
     <section class="stats-grid">
       <article class="stat-card"><span class="stat-icon red">!</span><div><small>NEW ALERTS</small><strong>7</strong><p><b>3 high priority</b> since yesterday</p></div></article>
-      <article class="stat-card"><span class="stat-icon blue">▤</span><div><small>TRACKED BILLS</small><strong>186</strong><p><b class="positive">+14</b> in the last 7 days</p></div></article>
       <button class="stat-card session-stat" data-open-sessions><span class="stat-icon green">◉</span><div><small>STATES IN SESSION</small><strong>${sessionSchedule.filter(s=>s.status==="In session").length}</strong><p><b class="positive">${sessionSchedule.filter(s=>s.status==="Special session").length} special</b> · View all 50 states</p></div><span class="stat-arrow">→</span></button>
       <article class="stat-card"><span class="stat-icon purple">#</span><div><small>KEYWORD HITS</small><strong>43</strong><p>Across <b>18 new bills</b></p></div></article>
       <article class="stat-card"><span class="stat-icon green">◇</span><div><small>UPCOMING HEARINGS</small><strong>9</strong><p>Next: <b>Today, 2:00 PM</b></p></div></article>
