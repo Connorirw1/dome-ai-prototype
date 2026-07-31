@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="./bill-workspace.css" />
   <link rel="stylesheet" href="./search-workflow.css" />
   <link rel="stylesheet" href="./dashboard-keyword-review.css" />
+  <link rel="stylesheet" href="./bill-review-workflow.css" />
+  <link rel="stylesheet" href="./ai-chat.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -34,6 +36,7 @@
         <a class="nav-link" href="#clients" data-route="clients"><span class="nav-icon">◎</span><span>Clients</span></a>
         <a class="nav-link" href="#keywords" data-route="keywords"><span class="nav-icon">#</span><span>Keywords</span></a>
         <a class="nav-link" href="#search" data-route="search"><span class="nav-icon">⌕</span><span>Search</span></a>
+        <a class="nav-link" href="#ask" data-route="ask"><span class="nav-icon ai-nav-icon">✦</span><span>Ask Dome</span></a>
         <a class="nav-link" href="#reports" data-route="reports"><span class="nav-icon">▤</span><span>Reports</span></a>
         <a class="nav-link settings-link" href="#settings" data-route="settings"><span class="nav-icon">⚙</span><span>Settings</span></a>
       </nav>
@@ -61,7 +64,7 @@
         <div class="topbar-actions">
           <button class="global-search" id="globalSearch"><span>⌕</span><span>Search legislation</span><kbd>⌘ K</kbd></button>
           <button class="top-icon has-dot" aria-label="Notifications">♢</button>
-          <button class="help" aria-label="Help">?</button>
+          <button class="ai-top-button" id="openAIChat" aria-label="Ask Dome about this page" title="Ask Dome about this page (⌘ J)"><span>✦</span><span>Ask Dome</span></button>
           <button class="user-menu" aria-label="Open user menu">CM</button>
         </div>
       </header>
@@ -99,6 +102,10 @@
   <div class="object-backdrop" id="objectBackdrop" hidden></div>
   <aside class="object-drawer" id="objectDrawer" aria-label="Object details" aria-hidden="true">
     <div id="objectDrawerContent"></div>
+  </aside>
+
+  <aside class="ai-chat-panel" id="aiChatPanel" aria-label="Ask Dome" aria-hidden="true">
+    <div id="aiChatPanelContent"></div>
   </aside>
 
   <div class="toast" id="toast" role="status"></div>
