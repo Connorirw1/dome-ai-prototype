@@ -60,6 +60,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .data-table th{padding:10px 14px;letter-spacing:.075em}
 .data-table td{padding:12px 14px}
 .data-table tbody tr:hover,.issue-db-table tbody tr:hover td{background:#f8faf8}
+.data-table th:last-child,.data-table td:last-child{position:sticky;right:0;z-index:1;background:#fff;box-shadow:-1px 0 0 var(--line)}
+.data-table th:last-child{z-index:2;background:#f7f8f7}
+.data-table tbody tr:hover td:last-child{background:#f8faf8}
 .modal{border:1px solid rgba(255,255,255,.75);border-radius:9px;box-shadow:0 28px 80px rgba(13,29,23,.24)}
 .modal::backdrop{background:rgba(16,29,24,.42);backdrop-filter:blur(3px)}
 .toast{box-shadow:0 10px 30px rgba(15,38,28,.18)}
@@ -78,6 +81,9 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .alert-row:hover{background:#f8faf8}
 .alert-symbol{width:28px;height:28px}
 .right-rail{gap:12px}
+.bill-review-queue{container:review-queue / inline-size}
+.review-row-actions{min-width:0}
+.review-row-actions button{width:100%;white-space:nowrap}
 
 /* Issue library */
 .issue-grid{gap:12px}
@@ -163,17 +169,58 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
   .bill-workspace-layout{grid-template-columns:minmax(0,1fr) 250px}
 }
 
-@media(max-width:760px){
+@container review-queue (max-width:1050px){
+  .review-queue-columns{display:none}
+  .bill-review-row{grid-template-columns:minmax(210px,1.25fr) minmax(165px,1fr) minmax(125px,.72fr) 116px;gap:10px}
+  .review-context{display:none}
+}
+
+@container review-queue (max-width:760px){
+  .bill-review-row{grid-template-columns:minmax(0,1fr) 116px;gap:11px;align-items:start}
+  .review-bill-identity{grid-column:1}
+  .review-reason,.review-workflow{grid-column:1}
+  .review-row-actions{grid-column:2;grid-row:1 / span 3;align-self:center}
+}
+
+@container review-queue (max-width:620px){
+  .review-queue-toolbar{align-items:flex-start;flex-wrap:wrap;gap:12px;padding:15px}
+  .review-queue-toolbar>div:last-child{display:flex;width:100%;justify-content:space-between}
+  .review-filter-bar{padding-left:15px;padding-right:15px}
+  .bill-review-row{padding:14px 15px}
+}
+
+@container review-queue (max-width:480px){
+  .bill-review-row{grid-template-columns:1fr}
+  .review-row-actions{grid-column:1;grid-row:auto;grid-template-columns:1fr 1fr;align-self:auto}
+}
+
+@media(max-width:900px){
   .app-shell{display:block}
+  .sidebar{transform:translateX(-100%);transition:.22s}
+  .sidebar.open{transform:none;box-shadow:20px 0 60px rgba(11,28,21,.28)}
+  .side-collapse,.mobile-menu{display:block}
+  .main-area{grid-column:auto}
   .topbar{height:56px;padding:0 13px}
   .topbar-left{gap:6px}
+  .crumb,.crumb-sep{display:none}
   .global-search{width:34px;display:grid;grid-template-columns:1fr;place-items:center;padding:0}
   .global-search>span:nth-child(2),.global-search kbd{display:none}
   .page{padding:22px 15px 45px}
   .stats-grid,.issue-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .search-layout{grid-template-columns:1fr}
   .bill-workspace-layout{grid-template-columns:1fr}
   .card-footer button{opacity:1}
+}
+
+@media(max-width:760px){
+  .search-layout{grid-template-columns:1fr}
+}
+
+@media(max-width:680px){
+  .issue-grid{grid-template-columns:1fr}
+  .toolbar{flex-wrap:wrap}
+  .toolbar .inline-search{flex:1 1 100%;width:100%}
+  .toolbar-spacer{display:none}
+  .toolbar .filter-button{flex:1;min-width:0}
 }
 
 @media(max-width:500px){
