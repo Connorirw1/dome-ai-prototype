@@ -397,10 +397,10 @@ function renderDashboard(){
   const filters=["All alerts","Bills","Keywords","Hearings","Actions"],keywordCount=unreviewedKeywordMatches().length,isKeywordReview=state.dashboardFilter==="Keywords",reviewBills=billsNeedingReview(),reviewCount=reviewBills.length,highReviewCount=reviewBills.filter(bill=>["High","Critical"].includes(billReview(bill).priority)).length,isReview=state.dashboardMode==="review";
   return `${sectionHeader(pageMeta.dashboard[1],pageMeta.dashboard[2])}
     <section class="stats-grid">
-      <article class="stat-card"><span class="stat-icon red">!</span><div><small>NEW ALERTS</small><strong>7</strong><p><b>3 high priority</b> since yesterday</p></div></article>
-      <button class="stat-card bill-review-stat" data-dashboard-mode="review"><span class="stat-icon blue">▱</span><div><small>BILLS TO REVIEW</small><strong>${reviewCount}</strong><p><b>${highReviewCount} high priority</b> · Open work queue</p></div><span class="stat-arrow">→</span></button>
-      <button class="stat-card session-stat" data-open-sessions><span class="stat-icon green">◉</span><div><small>STATES IN SESSION</small><strong>${sessionSchedule.filter(s=>s.status==="In session").length}</strong><p><b class="positive">${sessionSchedule.filter(s=>s.status==="Special session").length} special</b> · View all 50 states</p></div><span class="stat-arrow">→</span></button>
-      <article class="stat-card"><span class="stat-icon purple">#</span><div><small>KEYWORD HITS</small><strong>43</strong><p>Across <b>18 new bills</b></p></div></article>
+      <article class="stat-card"><div><small>NEW ALERTS</small><strong>7</strong><p><b>3 high priority</b> since yesterday</p></div></article>
+      <button class="stat-card bill-review-stat" data-dashboard-mode="review"><div><small>BILLS TO REVIEW</small><strong>${reviewCount}</strong><p><b>${highReviewCount} high priority</b> · Open work queue</p></div><span class="stat-arrow">→</span></button>
+      <button class="stat-card session-stat" data-open-sessions><div><small>STATES IN SESSION</small><strong>${sessionSchedule.filter(s=>s.status==="In session").length}</strong><p><b class="positive">${sessionSchedule.filter(s=>s.status==="Special session").length} special</b> · View all 50 states</p></div><span class="stat-arrow">→</span></button>
+      <article class="stat-card"><div><small>KEYWORD HITS</small><strong>43</strong><p>Across <b>18 new bills</b></p></div></article>
     </section>
     <nav class="dashboard-mode-tabs" aria-label="Dashboard workspace"><button class="${!isReview?"active":""}" data-dashboard-mode="inbox"><span>Inbox</span><i>7</i><small>Changes and notifications</small></button><button class="${isReview?"active":""}" data-dashboard-mode="review"><span>Bill review</span><i>${reviewCount}</i><small>Research and decisions</small></button></nav>
     ${isReview?renderBillReviewQueue():`<div class="dashboard-grid">

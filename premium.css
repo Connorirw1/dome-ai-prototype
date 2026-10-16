@@ -69,11 +69,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 
 /* Dashboard */
 .stats-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:13px}
-.stat-card{min-height:104px;padding:16px 17px;gap:12px;border-radius:8px;box-shadow:0 1px 1px rgba(18,35,28,.02)}
+.stat-card{display:block;min-height:82px;padding:12px 15px;border-radius:8px;text-align:left;box-shadow:0 1px 1px rgba(18,35,28,.02)}
 .stat-card:hover{border-color:#d0d8d3;background:#fff;box-shadow:var(--shadow)}
-.stat-icon{width:31px;height:31px;border-radius:7px}
 .stat-card small{letter-spacing:.085em}
-.stat-card strong{font-size:24px;margin:3px 0 1px}
+.stat-card strong{font-size:22px;margin:2px 0 0}
+.stat-card p{line-height:1.35}
 .dashboard-mode-tabs{gap:12px;margin:1px 0 13px}
 .dashboard-mode-tabs button{display:flex;gap:7px;padding:10px 2px}
 .dashboard-mode-tabs small{display:none}
@@ -224,6 +224,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 }
 
 @media(max-width:500px){
-  .stats-grid,.issue-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .issue-grid{grid-template-columns:1fr}
   .search-hero{padding:8px}
 }
