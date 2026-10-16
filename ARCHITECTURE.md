@@ -219,9 +219,19 @@ Every workspace-owned table should include `organization_id`. Authorization shou
 
 ## Prototype behavior
 
-The current build is intentionally local and dependency-free. Sample records live in `app.js`. Create, edit, delete, comments, priorities, and actions mutate in-memory state; refreshing restores the sample dataset. Hash routes make primary surfaces and object detail states directly addressable. The shared object drawer demonstrates relationship traversal and collaboration without losing list context. The next implementation step is to move the domain and collaboration records behind a typed API and persistent database while preserving these view contracts.
+The current build is intentionally local and dependency-free. Sample records live in `app.js`. Most create, edit, delete, comments, priorities, and actions mutate in-memory state; refreshing restores the sample dataset. Firm setup and its created records, plus issue-table edits, persist locally in browser storage. Hash routes make primary surfaces and object detail states directly addressable. The shared object drawer demonstrates relationship traversal and collaboration without losing list context. The next implementation step is to move the domain and collaboration records behind a typed API and persistent database while preserving these view contracts.
 
 ## Build sequence
+
+### Firm setup prototype
+
+`#setup` is an independent six-step flow exposed in Settings, with an incomplete-setup reminder and completion summary on Dashboard. `firm-setup.js` owns the draft, validation, save/resume behavior, and conversion into shared domain objects; `firm-setup.css` scopes the distraction-free layout. Drafts and created records persist under the versioned `domeFirmSetupV1` local-storage key. Repeated completion is additive and reuses existing objects. It never deletes existing demo objects or confirms bill relevance.
+
+The draft captures firm and administrator details, clients and unverified business context, issue/theme/client relationships, issue-scoped keywords, jurisdiction coverage, initial client ownership, and invitation drafts. Raw client context is retained separately from structured profile facts. Completion creates linked domain records and shows sample bill suggestions filtered by issue and state. Invitations remain drafts and grant no permissions; coverage does not configure ingestion in this prototype.
+
+Production should move this contract to organization-scoped `onboarding_drafts`, `organization_preferences`, and `invitations`. Finalization should be an idempotent transaction using stable object IDs, recording onboarding completion and object creation events. Membership activation, invitation delivery, permission checks, and provider matching must be separate explicit operations. Draft resumption should follow the authenticated workspace and user, with version/concurrency checks.
+
+### Production implementation
 
 1. Add authentication, organizations, roles, typed object identity, and stable full-page routes.
 2. Persist clients, issues, keywords, relationships, assignments, comments, actions, mentions, priorities, and activity events.
