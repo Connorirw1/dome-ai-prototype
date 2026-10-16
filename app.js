@@ -40,7 +40,8 @@ const state = {
     {id:3,name:"Northstar Renewables",initials:"NR",industry:"Energy",owner:"Priya Shah",issues:["Climate & Energy"],bills:38,activity:"2 hr ago",color:"teal"},
     {id:4,name:"Frontier Technology Council",initials:"FT",industry:"Technology",owner:"Eli Rosen",issues:["Artificial Intelligence","Data Privacy"],bills:67,activity:"Today",color:"blue"},
     {id:5,name:"CareBridge Alliance",initials:"CA",industry:"Healthcare",owner:"Maya Chen",issues:["Healthcare Access"],bills:19,activity:"Yesterday",color:"orange"},
-    {id:6,name:"Commerce Coalition",initials:"CC",industry:"Trade Association",owner:"Connor Matthews",issues:["Buy Now, Pay Later","Data Privacy"],bills:42,activity:"Yesterday",color:"navy"}
+    {id:6,name:"Commerce Coalition",initials:"CC",industry:"Trade Association",owner:"Connor Matthews",issues:["Buy Now, Pay Later","Data Privacy"],bills:42,activity:"Yesterday",color:"navy"},
+    {id:7,name:"UrbanKey",initials:"UK",industry:"Real Estate",owner:"Maya Chen",issues:["Housing & Real Estate"],bills:1,activity:"Yesterday",color:"green"}
   ],
   keywords: [
     {id:1,term:"algorithmic rent",match:"Exact phrase",group:"Housing & Real Estate",groupType:"Issue",hits:12,trend:4,themes:["Algorithmic Pricing and Rent Coordination"]},
